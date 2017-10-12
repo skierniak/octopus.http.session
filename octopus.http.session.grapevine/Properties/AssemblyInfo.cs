@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("octopus.http.session.tests")]
+[assembly: AssemblyTitle("octopus.http.session.grapevine")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("octopus.http.session.tests")]
+[assembly: AssemblyProduct("octopus.http.session.grapevine")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Następujący identyfikator GUID jest identyfikatorem biblioteki typów w przypadku udostępnienia tego projektu w modelu COM
-[assembly: Guid("0d243460-d816-488a-b468-184a50575c65")]
+[assembly: Guid("8faab355-11b6-434c-aa63-b8966f78855c")]
 
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Możesz określić wszystkie wartości lub użyć domyślnych numerów kompilacji i poprawki
 // przy użyciu symbolu „*”, tak jak pokazano poniżej:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.17282.50")]
-[assembly: AssemblyFileVersion("1.0.17282.49")]
+[assembly: AssemblyVersion("1.0.17282.8")]
+[assembly: AssemblyFileVersion("1.0.17282.8")]

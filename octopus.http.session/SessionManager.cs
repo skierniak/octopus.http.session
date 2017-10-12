@@ -16,6 +16,7 @@ namespace octopus.http.session
         private int sessionCleanInterval;
         private int defaultSessionTTL = 3600;
         private bool cleanTaskLock = false;
+        private string defaultSessionId = "SID";
 
         private static SessionManager _instance;
 
@@ -154,6 +155,11 @@ namespace octopus.http.session
         /// Returns total sessions count.
         /// </summary>
         public int Count { get => sessions.Count; }
+
+        /// <summary>
+        /// Default session name.
+        /// </summary>
+        public string DefaultSessionId { get => defaultSessionId; set => defaultSessionId = value; }
 
         /// <summary>
         /// Clears all sessions.
