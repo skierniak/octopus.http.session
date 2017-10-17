@@ -48,14 +48,15 @@
     <Compile Include="SessionManagerTests.cs" />
     <Compile Include="SessionTests.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ext\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\octopus.http.session\octopus.http.session.csproj">
       <Project>{e5d05858-841d-413a-af2a-2344a928b34b}</Project>
       <Name>octopus.http.session</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ext\nunit.framework.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

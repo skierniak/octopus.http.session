@@ -1,3 +1,0 @@
-﻿v4.1.1.0 
-git SHA-1: 4003de2dcad909925c6bd4e803b4b4b495cc681f
-.NET4.0
