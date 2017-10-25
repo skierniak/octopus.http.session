@@ -13,12 +13,11 @@ namespace octopus.http.session.grapevine
     public static class GrapewineSessionExtensions
     {
         /// <summary>
-        /// Search session for current request. Returns session, null or fresh session.
-        /// first searches cookies then GET and POST variables.  
+        /// Search session for current request.
+        /// First searches cookies then GET and POST variables.  
         /// </summary>
         /// <param name="context">Current http context.</param>
-        /// <param name="autoCreate">When a session does not exist - If is set to true method returns a new session, if is set to false method returns null.</param>
-        /// <returns></returns>
+        /// <returns>Session object or null.</returns>
         public static ISession GetSession(this IHttpContext context)
         {
             SessionManager mgr = SessionManager.GetSessionManager();
@@ -58,7 +57,7 @@ namespace octopus.http.session.grapevine
             session[clientControlHashKey] = context.GetClientConnectionHash();
             if (!context.Response.ResponseSent)
             {
-                var cookie = new System.Net.Cookie(mgr.DefaultSessionId, session.Sid);
+                var cookie = new System.Net.Cookie(mgr.DefaultSessionId, session.Sid,"/");
                 context.Response.Cookies.Add(cookie);
                 return session;
             }

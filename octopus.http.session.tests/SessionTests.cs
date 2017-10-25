@@ -40,10 +40,17 @@ namespace octopus.http.session.tests
             ISession s = SessionManager.GetSessionManager().GetSession();
             DateTime d1 = s.Expiration;
             s.TTL = s.TTL - 10;
+
+            int result = (int)Math.Round(d1.TimeOfDay.TotalSeconds - s.Expiration.TimeOfDay.TotalSeconds);
+            Console.WriteLine($"The time difference: {result}s.");
+            Assert.True(result == 10);
+
             DateTime d2 = s.Expiration;
-            Assert.False(d1 == d2);
-            Assert.True(new DateTime(d1.Ticks - new TimeSpan(0, 0, 10).Ticks) == d2);
-            Console.WriteLine($"old ttl:{d1}, new ttl (old - 10s):{new DateTime(d1.Ticks - new TimeSpan(0, 0, 10).Ticks)}");
+            DateTime d3 = new DateTime(d1.Ticks - new TimeSpan(0, 0, 10).Ticks);
+
+            Assert.True(d3.Year == d2.Year 
+                && d2.DayOfYear == d2.DayOfYear 
+                && d2.TimeOfDay.TotalSeconds == d2.TimeOfDay.TotalSeconds);
         }
 
         [Test]
